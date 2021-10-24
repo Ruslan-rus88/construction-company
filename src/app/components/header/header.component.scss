@@ -1,0 +1,32 @@
+@import '../../../styles.scss';
+
+.header {
+    color: #ffffff;
+    background-color: var(--main-background-color);
+}
+.header__wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.header__box {
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+}
+.header__box--logo {
+
+}
+.header__logo {
+    margin: 0;
+}
+.header__img {
+    width: 60px;
+    height: 60px;
+}
+
+.header__box--navbar {
+    flex-grow: 1;
+}
+.header__navbar {
+    width: 100%;
+}

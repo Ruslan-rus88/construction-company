@@ -1,78 +1,39 @@
-<header class="header">
-  <div class="header__wrapper wrapper">
-    <div class="header__box header__box--logo">
-      <figure class="header__logo logo-box">
-        <img src="./assets/images/logo-modified.png" alt="Logo" class="logo__img">
-      </figure>
-    </div>
-    <div class="header__box header__box--navbar">
-      <ul class="navbar">
-        <a 
-          class="navbar__item navbar__item--home"
-          [routerLink] = "['home']"
-          [routerLinkActive]="['navbar__item--active']"
-        >Home</a>
-        <a 
-          class="navbar__item navbar__item--services"
-          [routerLink] = "['services']"
-          [routerLinkActive]="['navbar__item--active']"
-        >Leistungen
-          <ul class="navbar-secondary">
-            <a href="" class="navbar-secondary__item">Trockenbau</a>
-            <a href="" class="navbar-secondary__item">Abbruch/Entkernung</a>
-            <a href="" class="navbar-secondary__item">Schadstoffsanierung</a>
-            <a href="" class="navbar-secondary__item">Gartenpflegearbeiten</a>
-          </ul>
-        </a>
-        <a 
-          class="navbar__item navbar__item--career"
-          [routerLink] = "['career']"
-          [routerLinkActive]="['navbar__item--active']"
-        >Karriere</a>
-        <a 
-          class="navbar__item navbar__item--contacts"
-          [routerLink] = "['contacts']"
-          [routerLinkActive]="['navbar__item--active']"
-        >Kontakt</a>
-     </ul>
-    </div>
-  </div>
-</header>
-<!-- /HEADER -->
+<div class="navbar">
+  <div class="navbar__box navbar__box--actions">
+    <!-- <input type="checkbox" id="navbar__checkbox--list" class="navbar__checkbox navbar__checkbox--list"> -->
+    <label for="navbar__checkbox--list" class="navbar__label">
+      <img class="navbar__icon navbar__icon--list" src="./assets/icons/list.svg" alt="list">
+    </label>
+  </div>  
+  <input type="checkbox" id="navbar__checkbox--list" class="navbar__checkbox navbar__checkbox--list">
 
-
-<div class="wrapper">
+  <div class="navbar__box navbar__box--list">
+    <a 
+      class="navbar__item navbar__item--home"
+      [routerLink] = "['home']"
+      [routerLinkActive]="['navbar__item--active']"
+    >Home</a>
+    <a 
+      class="navbar__item navbar__item--services"
+      [routerLink] = "['services']"
+      [routerLinkActive]="['navbar__item--active']"
+    >Leistungen
+      <ul class="navbar-secondary">
+        <a href="" class="navbar-secondary__item">Trockenbau</a>
+        <a href="" class="navbar-secondary__item">Abbruch/Entkernung</a>
+        <a href="" class="navbar-secondary__item">Schadstoffsanierung</a>
+        <a href="" class="navbar-secondary__item">Gartenpflegearbeiten</a>
+      </ul>
+    </a>
+    <a 
+      class="navbar__item navbar__item--career"
+      [routerLink] = "['career']"
+      [routerLinkActive]="['navbar__item--active']"
+    >Karriere</a>
+    <a 
+      class="navbar__item navbar__item--contacts"
+      [routerLink] = "['contacts']"
+      [routerLinkActive]="['navbar__item--active']"
+    >Kontakt</a>
+  </div>  
 </div>
-
-<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="navbar__item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="navbar__item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="navbar__item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-          <li class="navbar__item">
-            <a class="nav-link disabled">Disabled</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav> -->
