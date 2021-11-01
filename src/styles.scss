@@ -1,10 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~normalize.css';
+@import '~material-design-icons/iconfont/material-icons.css';
+
 :root {
     --active-color: rgb(218, 145, 10);
     --main-background-color: #ffffff;
     --main-text-color: #0E0C29;
     --active-text-color: #236F75;
+    --active-text-color-light: rgba(35, 111, 117, 0.1);
 }
 
 body {

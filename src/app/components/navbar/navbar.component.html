@@ -1,30 +1,39 @@
 <nav class="nav">
   <div class="nav__box nav__box--actions">
     <div class="nav__inner-box nav__inner-box--icon">
-      <img 
-        class="nav__icon nav__icon--list" 
-        src="./assets/icons/list.svg" 
-        alt="list"
-        (click)="navbarBoxShown = !navbarBoxShown">
+      <figure class="icon-box"
+        (click)="showFirstNavList = !showFirstNavList">
+        <i class="material-icons">reorder</i>
+      </figure>
     </div>
   </div>
   <div class="nav__box nav__box--list"
-    [ngClass]="{'nav__box--shown': navbarBoxShown}">
+    [ngClass]="{'nav__box--shown': showFirstNavList}">
     <ul class="nav__list nav__list--first">
       <li class="nav__item" *ngFor="let route of navRoutes">
         <a class="nav__link"
           [routerLink]="[route.path]"
           [routerLinkActiveOptions]="{exact: route.exact}"
           [routerLinkActive]="['nav__link--active']"
-          (click)="navbarBoxShown = !navbarBoxShown"
+          (click)="showFirstNavList = !showFirstNavList"
         >{{route.title}}</a>
-        <ul class="nav__list nav__list--second" *ngIf="route.subRoutes.length > 0">
+        <span class="nav__inner-box nav__inner-box--icon nav__inner-box--dropdown" *ngIf="route.subRoutes.length > 0">
+          <figure class="icon-box"
+            [ngClass]="{'icon-box-flipped': showSecondNavList}"
+            (click)="showSecondNavList = !showSecondNavList">
+            <i class="material-icons">arrow_drop_down</i>
+          </figure>
+        </span>
+        <ul 
+          class="nav__list nav__list--second"
+          [ngClass]="{'nav__list--shown': showSecondNavList}"
+          *ngIf="showSecondNavList && route.subRoutes.length > 0">
           <li class="nav__item" *ngFor="let subRoute of route.subRoutes">
             <a class="nav__link"
               [routerLink]="[subRoute.path]"
               [routerLinkActiveOptions]="{exact: subRoute.exact}"
               [routerLinkActive]="['nav__link--active']"
-              (click)="navbarBoxShown = !navbarBoxShown"
+              (click)="showFirstNavList = false"
             >{{subRoute.title}}</a>
           </li>
         </ul>
