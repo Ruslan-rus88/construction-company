@@ -20,7 +20,7 @@ import { DestroyComponent } from './components/destroy/destroy.component';
     ServicesComponent,
     CareerComponent,
     HeaderComponent,
-    DestroyComponent
+    DestroyComponent,
   ],
   imports: [
     BrowserModule,

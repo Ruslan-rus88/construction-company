@@ -1,9 +1,14 @@
 <header class="header">
     <div class="header__wrapper wrapper">
         <div class="header__box header__box--logo">
-            <figure class="header__img-box">
-                <img src="./assets/images/logo.png" alt="Logo" class="header__img">
-            </figure>
+            <a 
+                class="header__link"
+                [routerLink]="['']"    
+            >
+                <figure class="header__img-box">
+                    <img src="./assets/images/logo.png" alt="Logo" class="header__img">
+                </figure>    
+            </a>
         </div>
         <div class="header__box header__box--navbar">
             <app-navbar class="header__navbar"></app-navbar>

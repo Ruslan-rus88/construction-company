@@ -3,6 +3,9 @@
 .header {
     color: var(--main-text-color);
     background-color: #ffffff;
+    position: fixed;
+    width: 100vw;
+    z-index: 99;
 }
 
 .header__wrapper {
@@ -18,6 +21,9 @@
 }
 
 .header__box--logo {
+}
+
+.header__link {
 }
 
 .header__img-box {

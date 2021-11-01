@@ -27,7 +27,7 @@
         <ul 
           class="nav__list nav__list--second"
           [ngClass]="{'nav__list--shown': showSecondNavList}"
-          *ngIf="showSecondNavList && route.subRoutes.length > 0">
+          *ngIf="route.subRoutes.length > 0">
           <li class="nav__item" *ngFor="let subRoute of route.subRoutes">
             <a class="nav__link"
               [routerLink]="[subRoute.path]"

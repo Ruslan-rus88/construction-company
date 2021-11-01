@@ -9,7 +9,7 @@ import { ServicesComponent } from './pages/services/services.component';
 
 const routes: Routes = [
   { path: paths.home, component: HomeComponent },
-  { path: paths.services, component: ServicesComponent },
+  { path: paths.Leistungen, component: ServicesComponent },
 
   // update later
   { path: paths.trockenbau, component: ServicesComponent },
@@ -17,8 +17,8 @@ const routes: Routes = [
   { path: paths.schadstoffsanierung, component: ServicesComponent },
   { path: paths.gartenpflegearbeiten, component: ServicesComponent },
 
-  { path: paths.career, component: CareerComponent },
-  { path: paths.contacts, component: ContactsComponent },
+  { path: paths.Karriere, component: CareerComponent },
+  { path: paths.Kontakt, component: ContactsComponent },
   { path: '**', redirectTo: 'home' },
 ];
 
