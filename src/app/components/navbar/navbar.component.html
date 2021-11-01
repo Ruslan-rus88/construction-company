@@ -1,39 +1,34 @@
-<div class="navbar">
-  <div class="navbar__box navbar__box--actions">
-    <!-- <input type="checkbox" id="navbar__checkbox--list" class="navbar__checkbox navbar__checkbox--list"> -->
-    <label for="navbar__checkbox--list" class="navbar__label">
-      <img class="navbar__icon navbar__icon--list" src="./assets/icons/list.svg" alt="list">
-    </label>
-  </div>  
-  <input type="checkbox" id="navbar__checkbox--list" class="navbar__checkbox navbar__checkbox--list">
-
-  <div class="navbar__box navbar__box--list">
-    <a 
-      class="navbar__item navbar__item--home"
-      [routerLink] = "['home']"
-      [routerLinkActive]="['navbar__item--active']"
-    >Home</a>
-    <a 
-      class="navbar__item navbar__item--services"
-      [routerLink] = "['services']"
-      [routerLinkActive]="['navbar__item--active']"
-    >Leistungen
-      <ul class="navbar-secondary">
-        <a href="" class="navbar-secondary__item">Trockenbau</a>
-        <a href="" class="navbar-secondary__item">Abbruch/Entkernung</a>
-        <a href="" class="navbar-secondary__item">Schadstoffsanierung</a>
-        <a href="" class="navbar-secondary__item">Gartenpflegearbeiten</a>
-      </ul>
-    </a>
-    <a 
-      class="navbar__item navbar__item--career"
-      [routerLink] = "['career']"
-      [routerLinkActive]="['navbar__item--active']"
-    >Karriere</a>
-    <a 
-      class="navbar__item navbar__item--contacts"
-      [routerLink] = "['contacts']"
-      [routerLinkActive]="['navbar__item--active']"
-    >Kontakt</a>
-  </div>  
-</div>
+<nav class="nav">
+  <div class="nav__box nav__box--actions">
+    <div class="nav__inner-box nav__inner-box--icon">
+      <img 
+        class="nav__icon nav__icon--list" 
+        src="./assets/icons/list.svg" 
+        alt="list"
+        (click)="navbarBoxShown = !navbarBoxShown">
+    </div>
+  </div>
+  <div class="nav__box nav__box--list"
+    [ngClass]="{'nav__box--shown': navbarBoxShown}">
+    <ul class="nav__list nav__list--first">
+      <li class="nav__item" *ngFor="let route of navRoutes">
+        <a class="nav__link"
+          [routerLink]="[route.path]"
+          [routerLinkActiveOptions]="{exact: route.exact}"
+          [routerLinkActive]="['nav__link--active']"
+          (click)="navbarBoxShown = !navbarBoxShown"
+        >{{route.title}}</a>
+        <ul class="nav__list nav__list--second" *ngIf="route.subRoutes.length > 0">
+          <li class="nav__item" *ngFor="let subRoute of route.subRoutes">
+            <a class="nav__link"
+              [routerLink]="[subRoute.path]"
+              [routerLinkActiveOptions]="{exact: subRoute.exact}"
+              [routerLinkActive]="['nav__link--active']"
+              (click)="navbarBoxShown = !navbarBoxShown"
+            >{{subRoute.title}}</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>

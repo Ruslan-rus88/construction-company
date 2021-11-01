@@ -1,27 +1,32 @@
 @import '../../../styles.scss';
 
 .header {
-    color: #ffffff;
-    background-color: var(--main-background-color);
+    color: var(--main-text-color);
+    background-color: #ffffff;
 }
+
 .header__wrapper {
     display: flex;
     justify-content: space-between;
 }
+
 .header__box {
-    min-height: 80px;
+    height: 120px;
+    box-sizing: border-box;
     display: flex;
     align-items: center;
 }
-.header__box--logo {
 
+.header__box--logo {
 }
-.header__logo {
+
+.header__img-box {
     margin: 0;
 }
+
 .header__img {
-    width: 60px;
-    height: 60px;
+    width: 180px;
+    height: 90px;
 }
 
 .header__box--navbar {

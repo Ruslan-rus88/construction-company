@@ -2,19 +2,21 @@
 @import '~normalize.css';
 :root {
     --active-color: rgb(218, 145, 10);
-    --main-background-color: #0c223d;
-    --main-background-color-light: #0f2b4d;
+    --main-background-color: #ffffff;
+    --main-text-color: #0E0C29;
+    --active-text-color: #236F75;
 }
 
 body {
-    font-family: 'Titillium Web', Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
+    background: #F2F9F6;
 }
 
 .wrapper {
     max-width: 1200px;
     box-sizing: border-box;
-    padding: 0 15px;
+    padding: 0 25px;
     margin: 0 auto;
 }
 
@@ -26,5 +28,6 @@ a {
 ul {
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 
