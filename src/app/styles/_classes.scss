@@ -42,6 +42,16 @@
   font-size: 30px;
   font-weight: 500;
   margin: 0;
+  padding: 5px 10px 5px 5px;
+  width: fit-content;
+  color: var(--active-text-color);
+  background-color: rgba(35, 111, 117, 0.05);
+  border-bottom: 1px solid var(--active-text-color);
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: rgba(35, 111, 117, 0.1);
+  }
 }
 
 .title-third {
