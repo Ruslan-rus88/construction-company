@@ -9,7 +9,9 @@ import { ContactsComponent } from './pages/contacts/contacts.component';
 import { ServicesComponent } from './pages/services/services.component';
 import { CareerComponent } from './pages/career/career.component';
 import { HeaderComponent } from './components/header/header.component';
-import { DestroyComponent } from './components/destroy/destroy.component';
+import { SlideShowComponent } from './components/slide-show/slide-show.component';
+import { AbbruchEntkernungComponent } from './pages/services/abbruch-entkernung/abbruch-entkernung.component';
+import { TrockenbauComponent } from './pages/services/trockenbau/trockenbau.component';
 
 @NgModule({
   declarations: [
@@ -20,11 +22,13 @@ import { DestroyComponent } from './components/destroy/destroy.component';
     ServicesComponent,
     CareerComponent,
     HeaderComponent,
-    DestroyComponent,
+    AbbruchEntkernungComponent,
+    SlideShowComponent,
+    TrockenbauComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

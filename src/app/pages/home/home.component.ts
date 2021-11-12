@@ -6,7 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
+  slideShowImagesPaths: string[] = [
+    '../../../assets/images/home-slides/1.jpg',
+    '../../../assets/images/home-slides/2.jpg',
+    '../../../assets/images/home-slides/3.jpg',
+    '../../../assets/images/home-slides/4.jpg',
+  ]
   constructor() { }
 
   ngOnInit(): void {

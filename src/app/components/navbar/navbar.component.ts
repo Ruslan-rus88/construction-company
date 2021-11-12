@@ -1,4 +1,4 @@
-import { Component, DoCheck, OnChanges, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { navRoutes } from 'src/app/app-routes';
 
 @Component({
@@ -6,7 +6,7 @@ import { navRoutes } from 'src/app/app-routes';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
 })
-export class NavbarComponent implements OnInit, OnChanges, DoCheck {
+export class NavbarComponent implements OnInit {
   showFirstNavList: boolean = false;
   showSecondNavList: boolean = false;
   navRoutes = navRoutes;
@@ -14,18 +14,5 @@ export class NavbarComponent implements OnInit, OnChanges, DoCheck {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(window);
-
-  }
-
-  ngOnChanges() {
-    console.log(window);
-    console.log(1);
-    
-  }
-
-  ngDoCheck() {
-    console.log(2);
-    
   }
 }
