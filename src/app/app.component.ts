@@ -1,11 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  template: `<app-header></app-header>
-                    <router-outlet></router-outlet>`,
+  templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'construction-company';
+  displayScrollBtn: boolean = false;
+
+  @HostListener('window:scroll', ['$event']) onScroll(event: any) {
+    this.displayScrollBtn = window.scrollY > 0 ? true : false; 
+  }
+
+  scrollUp() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }
 }

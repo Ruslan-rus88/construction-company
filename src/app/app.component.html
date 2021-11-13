@@ -1,0 +1,7 @@
+<app-header></app-header>
+<router-outlet></router-outlet>
+<div class="move-up-container" *ngIf="displayScrollBtn">
+    <figure class="icon-box" (click)="scrollUp()">
+        <i class="material-icons">arrow_upward</i>
+    </figure>
+</div>
