@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-photo-collage',
@@ -6,10 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./photo-collage.component.scss']
 })
 export class PhotoCollageComponent implements OnInit {
+  @Input() photos: any[] = [];
 
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }

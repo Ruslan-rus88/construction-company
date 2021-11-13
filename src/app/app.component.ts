@@ -9,7 +9,7 @@ export class AppComponent {
   displayScrollBtn: boolean = false;
 
   @HostListener('window:scroll', ['$event']) onScroll(event: any) {
-    this.displayScrollBtn = window.scrollY > 0 ? true : false; 
+    this.displayScrollBtn = window.scrollY > 0 ? true : false;
   }
 
   scrollUp() {
