@@ -30,6 +30,12 @@
             font-size: 30px;
             color: rgba(35, 111, 117, 0.3);
             transition: color 0.3s;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
         }
     }
 }

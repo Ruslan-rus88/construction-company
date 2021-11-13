@@ -12,6 +12,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { SlideShowComponent } from './components/slide-show/slide-show.component';
 import { AbbruchEntkernungComponent } from './pages/services/abbruch-entkernung/abbruch-entkernung.component';
 import { TrockenbauComponent } from './pages/services/trockenbau/trockenbau.component';
+import { PhotoCollageComponent } from './components/photo-collage/photo-collage.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { TrockenbauComponent } from './pages/services/trockenbau/trockenbau.comp
     AbbruchEntkernungComponent,
     SlideShowComponent,
     TrockenbauComponent,
+    PhotoCollageComponent,
   ],
   imports: [
     BrowserModule,
