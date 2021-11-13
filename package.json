@@ -6,10 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-
-    "ghbuild": "ng build --prod --base-href 'https://Ruslan-rus88.github.io/construction-company/'",
-    "ngh": "ngh --dir dist/construction-company"
+    "test": "ng test"
   },
   "private": true,
   "dependencies": {
