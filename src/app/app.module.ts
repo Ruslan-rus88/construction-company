@@ -6,14 +6,17 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ContactsComponent } from './pages/contacts/contacts.component';
-import { ServicesComponent } from './pages/services/services.component';
+import { LeistungenComponent } from './pages/leistungen/leistungen.component';
 import { CareerComponent } from './pages/career/career.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SlideShowComponent } from './components/slide-show/slide-show.component';
-import { AbbruchEntkernungComponent } from './pages/services/abbruch-entkernung/abbruch-entkernung.component';
-import { TrockenbauComponent } from './pages/services/trockenbau/trockenbau.component';
+import { AbbruchEntkernungComponent } from './pages/leistungen/abbruch-entkernung/abbruch-entkernung.component';
+import { TrockenbauComponent } from './pages/leistungen/trockenbau/trockenbau.component';
 import { PhotoCollageComponent } from './components/photo-collage/photo-collage.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { SchadstoffsanierungComponent } from './pages/leistungen/schadstoffsanierung/schadstoffsanierung.component';
+import { MobelmontageComponent } from './pages/leistungen/mobelmontage/mobelmontage.component';
+import { AltbausanierungComponent } from './pages/leistungen/altbausanierung/altbausanierung.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,7 @@ import { FooterComponent } from './components/footer/footer.component';
     HomeComponent,
     NavbarComponent,
     ContactsComponent,
-    ServicesComponent,
+    LeistungenComponent,
     CareerComponent,
     HeaderComponent,
     AbbruchEntkernungComponent,
@@ -29,6 +32,9 @@ import { FooterComponent } from './components/footer/footer.component';
     TrockenbauComponent,
     PhotoCollageComponent,
     FooterComponent,
+    SchadstoffsanierungComponent,
+    MobelmontageComponent,
+    AltbausanierungComponent,
   ],
   imports: [
     BrowserModule,

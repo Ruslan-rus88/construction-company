@@ -1,12 +1,13 @@
 export const paths = {
     home: '',
-    Leistungen: 'Leistungen',
-    trockenbau: 'Leistungen/Trockenbau',
-    abbruch: 'Leistungen/abbruch-entkernung',
-    schadstoffsanierung: 'Leistungen/Schadstoffsanierung',
-    gartenpflegearbeiten: 'Leistungen/Gartenpflegearbeiten',
-    Karriere: 'Karriere',
-    Kontakt: 'Kontakt'
+    leistungen: 'leistungen',
+    trockenbau: 'leistungen/trockenbau',
+    altbausanierung: 'leistungen/altbausanierung',
+    abbruch: 'leistungen/abbruch-entkernung',
+    schadstoffsanierung: 'leistungen/schadstoffsanierung',
+    mobelmontage: 'leistungen/mobelmontage',
+    karriere: 'karriere',
+    kontakt: 'kontakt'
 }
 
 export const navRoutes = [
@@ -18,9 +19,14 @@ export const navRoutes = [
     },
     {
         title: 'Leistungen',
-        path: paths.Leistungen,
+        path: paths.leistungen,
         exact: true,
         subRoutes: [
+            {
+                title: 'Altbausanierung',
+                path: paths.altbausanierung,
+                exact: true,        
+            },
             {
                 title: 'Trockenbau',
                 path: paths.trockenbau,
@@ -37,21 +43,21 @@ export const navRoutes = [
                 exact: true,        
             },
             {
-                title: 'Gartenpflegearbeiten',
-                path: paths.gartenpflegearbeiten,
+                title: 'Möbelmontage',
+                path: paths.mobelmontage,
                 exact: true,        
             },            
         ]
     },
     {
         title: 'Karriere',
-        path: paths.Karriere,
+        path: paths.karriere,
         exact: true,
         subRoutes: []
     },
     {
         title: 'Kontakt',
-        path: paths.Kontakt,
+        path: paths.kontakt,
         exact: true,
         subRoutes: []
     },

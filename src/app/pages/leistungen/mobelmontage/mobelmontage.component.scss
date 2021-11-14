@@ -1,0 +1,18 @@
+.mobelmontage {}
+
+.mobelmontage__background-wrapper {
+    &::before {
+        background-image: url(../../../../assets/images/mobelmontage.jpg);
+    }
+}
+
+.mobelmontage__wrapper {}
+
+.mobelmontage__title {}
+
+.info {}
+
+.info__wrapper {}
+
+.info__text {}
+

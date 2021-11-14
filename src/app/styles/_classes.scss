@@ -88,7 +88,7 @@
 
 .background-wrapper {
   width: 100vw;
-  height: 300px;
+  height: 600px;
   margin-bottom: 120px;
   position: relative;
 
@@ -101,7 +101,7 @@
       right: 0;
       background-image: inherit;
       background-size: cover;
-      // opacity: 0.8;
+      background-position: center;
       z-index: -1;
   }
 }
@@ -109,6 +109,7 @@
 @media screen and (max-width: 500px) {
   .background-wrapper {
       margin-bottom: 80px;
+      height: 400px;
   }
 }
 
@@ -131,3 +132,11 @@
   }
 }
 
+.material-icons {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
