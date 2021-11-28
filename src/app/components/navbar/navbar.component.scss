@@ -26,6 +26,7 @@
 .nav__box--actions {
     display: none;
     padding-left: 30px;
+    padding-right: 10px;
 
     .icon-box {
         transition: background-color 0.2s;
@@ -101,10 +102,20 @@
     flex-direction: column;
     color: var(--main-text-color);
     transition: opacity 0.2s;
+    animation: appearance 0.2s ease-in;
 
     .nav__link {
         display: block;
     }
+
+    @keyframes appearance {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }    
 }
 @media screen and (min-width: 780px) {
     .nav__item:hover > .nav__list--second {
