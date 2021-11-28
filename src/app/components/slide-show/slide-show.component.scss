@@ -5,18 +5,16 @@
 }
 .slideshow__box {
     position: relative;
-    width: 100%;
-    height: 500px;
+    width: 100vw;
+    min-height: fit-content;
+    max-height: calc(100vh - 120px);
     overflow: hidden;
 }
 .slideshow__box--img {
 
 }
 .slideshow__img {
-    position: absolute;
     width: 100%;
-    top: 50%;
-    transform: translateY(-50%);
 }
 
 .slideshow__box--indicators {
