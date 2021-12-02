@@ -25,28 +25,28 @@ export const navRoutes = [
             {
                 title: 'Altbausanierung',
                 path: paths.altbausanierung,
-                exact: true,        
+                exact: true,
             },
             {
                 title: 'Trockenbau',
                 path: paths.trockenbau,
-                exact: true,        
+                exact: true,
             },
             {
                 title: 'Abbruch/Entkernung',
                 path: paths.abbruch,
-                exact: true,        
+                exact: true,
             },
             {
                 title: 'Schadstoffsanierung',
                 path: paths.schadstoffsanierung,
-                exact: true,        
+                exact: true,
             },
             {
                 title: 'Möbelmontage',
                 path: paths.mobelmontage,
-                exact: true,        
-            },            
+                exact: true,
+            }
         ]
     },
     {

@@ -7,9 +7,9 @@ import { navRoutes } from 'src/app/app-routes';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements OnInit {
-  showFirstNavList: boolean = false;
-  showSecondNavList: boolean = false;
-  navRoutes = navRoutes;
+  public showFirstNavList: boolean = false;
+  public showSecondNavList: boolean = false;
+  public navRoutes = navRoutes;
 
   constructor() { }
 

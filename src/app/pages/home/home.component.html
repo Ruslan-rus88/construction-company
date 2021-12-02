@@ -29,15 +29,34 @@
                 <h2 class="services__title title">Leistungen</h2>
                 <div class="services__box services__box--list">
                     <ul class="services__list">
-                        <li class="services__item">Altbausanierung</li>
-                        <li class="services__item">Trockenbau</li>
-                        <li class="services__item">Abbruch / Entkernung</li>
-                        <li class="services__item">Schadstoffsanierung</li>
-                        <li class="services__item">Möbelmontage</li>
+                        <li 
+                            class="services__item" 
+                            *ngFor="let service of services; let i = index"
+                            [routerLink]="[service.path]"
+                            [routerLinkActiveOptions]="{exact: service.exact}"
+                            [routerLinkActive]="['nav__link--active']"
+                            (mouseover)="index = i"
+                            (mouseleave)="index = 0"
+                            >{{service.title}}
+                        </li>
                     </ul>
-                </div>    
+                    <div class="services__image-box" *ngIf="index === 0" >
+                        <img class="services__image" [src]="services[0].img" alt="">
+                    </div>
+                    <div class="services__image-box" *ngIf="index === 1" >
+                        <img class="services__image" [src]="services[1].img" alt="">
+                    </div>
+                    <div class="services__image-box" *ngIf="index === 2" >
+                        <img class="services__image" [src]="services[2].img" alt="">
+                    </div>
+                    <div class="services__image-box" *ngIf="index === 3" >
+                        <img class="services__image" [src]="services[3].img" alt="">
+                    </div>
+                    <div class="services__image-box" *ngIf="index === 4" >
+                        <img class="services__image" [src]="services[4].img" alt="">
+                    </div>
+                </div>
             </div>
-            <div class="services__box services__box--images"></div>
         </div>
     </section>
 
