@@ -5,11 +5,11 @@
 @import './app/styles/variables';
 
 :root {
-    --active-color: rgb(218, 145, 10);
-    --main-background-color: #84F8CC;
-    --main-text-color: #0E0C29;
-    --active-text-color: #236F75;
-    --active-text-color-light: rgba(35, 111, 117, 0.1);
+    --color-main: #0E0C29;
+    --color-active: #009897;
+    --color-active-light: #0fafaf;
+    --color-orange: #f1a622;
+    --color-orange-light: #f1c16d;
 }
 
 body {
