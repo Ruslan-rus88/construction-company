@@ -6,6 +6,7 @@ export const paths = {
     abbruch: 'leistungen/abbruch-entkernung',
     schadstoffsanierung: 'leistungen/schadstoffsanierung',
     mobelmontage: 'leistungen/mobelmontage',
+    galerie: 'galerie',
     karriere: 'karriere',
     kontakt: 'kontakt'
 }
@@ -48,6 +49,12 @@ export const navRoutes = [
                 exact: true,
             }
         ]
+    },
+    {
+        title: 'Galerie',
+        path: paths.galerie,
+        exact: true,
+        subRoutes: []
     },
     {
         title: 'Karriere',

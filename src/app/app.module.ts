@@ -17,6 +17,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { SchadstoffsanierungComponent } from './pages/leistungen/schadstoffsanierung/schadstoffsanierung.component';
 import { MobelmontageComponent } from './pages/leistungen/mobelmontage/mobelmontage.component';
 import { AltbausanierungComponent } from './pages/leistungen/altbausanierung/altbausanierung.component';
+import { GalleryComponent } from './pages/gallery/gallery.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { AltbausanierungComponent } from './pages/leistungen/altbausanierung/alt
     SchadstoffsanierungComponent,
     MobelmontageComponent,
     AltbausanierungComponent,
+    GalleryComponent,
   ],
   imports: [
     BrowserModule,

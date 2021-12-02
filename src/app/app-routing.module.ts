@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { paths } from './app-routes';
 import { CareerComponent } from './pages/career/career.component';
 import { ContactsComponent } from './pages/contacts/contacts.component';
+import { GalleryComponent } from './pages/gallery/gallery.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AbbruchEntkernungComponent } from './pages/leistungen/abbruch-entkernung/abbruch-entkernung.component';
 import { AltbausanierungComponent } from './pages/leistungen/altbausanierung/altbausanierung.component';
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: paths.schadstoffsanierung, component: SchadstoffsanierungComponent },
   { path: paths.mobelmontage, component: MobelmontageComponent },
 
+  { path: paths.galerie, component: GalleryComponent },
   { path: paths.karriere, component: CareerComponent },
   { path: paths.kontakt, component: ContactsComponent },
   { path: '**', redirectTo: 'home' },

@@ -186,6 +186,17 @@
         display: none;
     }    
 }
+@media screen and (max-width: 970px) {
+    .services__item {
+        height: 50px;
+        line-height: 50px;
+
+        &:after {
+            width: 34px;
+            height: 34px;
+        }    
+    }
+}
 
 .home__section--advantages {}
 .advantages {}
