@@ -18,6 +18,7 @@ import { SchadstoffsanierungComponent } from './pages/leistungen/schadstoffsanie
 import { MobelmontageComponent } from './pages/leistungen/mobelmontage/mobelmontage.component';
 import { AltbausanierungComponent } from './pages/leistungen/altbausanierung/altbausanierung.component';
 import { GalleryComponent } from './pages/gallery/gallery.component';
+import { GalleryImagesShowComponent } from './components/gallery-images-show/gallery-images-show.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { GalleryComponent } from './pages/gallery/gallery.component';
     MobelmontageComponent,
     AltbausanierungComponent,
     GalleryComponent,
+    GalleryImagesShowComponent,
   ],
   imports: [
     BrowserModule,

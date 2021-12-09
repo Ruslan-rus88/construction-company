@@ -1,3 +1,27 @@
-<div class="page">
-    <p>gallery works!</p>
+<div class="gallery page">
+  <div class="gallery__wrapper wrapper">
+    <div class="gallery__list">
+      <div class="gallery__item-box" *ngFor="let project of projects; let i = index">
+        <div class="gallery__item" (click)="activeProjectIndex = i">
+          <div class="gallery__img-box">
+            <img [src]="project.images[0].url" alt="" class="gallery__img">
+            <div class="gallery__location-box">
+              <span class="icon-box">
+                <i class="material-icons">place</i>
+              </span>
+              <span class="gallery__location">{{project.location}}</span>
+            </div>
+          </div>
+          <div class="gallery__text-box">
+            <p class="gallery__project-name">{{project.project_name}}</p>
+            <p class="gallery__photo-number">{{project.images.length}} Fotos</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+<app-gallery-images-show 
+  *ngIf="activeProjectIndex > -1"
+  [project]="projects[activeProjectIndex]"
+  (closeGalleryImagesShow)="closeGalleryImagesShow()"></app-gallery-images-show>

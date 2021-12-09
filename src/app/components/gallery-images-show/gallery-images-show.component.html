@@ -1,0 +1,18 @@
+<div class="show">
+<div class="show__box show__box--img">
+        <img [src]="project.images[index]['url']" alt="" class="show__img">
+    </div>
+    <div class="show__box show__box--indicators">
+        <span class="show__indicator-box" 
+        *ngFor="let item of project.images; let i = index"
+        [ngClass]="{'show__indicator--active' : index === i}"
+        (click)="onSelectImg(i)"
+        >
+            <span class="show__indicator"
+            [ngClass]="{'show__indicator--active' : index === i}"></span>
+        </span>
+    </div>
+
+
+    <button type="button" (click)="onClose()">close</button>
+</div>
