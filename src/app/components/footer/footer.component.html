@@ -20,13 +20,13 @@
                 <figure class="icon-box">
                     <i class="material-icons">mail</i>
                 </figure>
-                <a href = "mailto:i.barho@barho-bausrvice.de" class="contacts__email">i.barho@barho-bausrvice.de</a>
+                <a href = "mailto:i.barho@barho-bausrvice.de" class="contacts__email">i.barho@barho-bauservice.de</a>
             </div>            
             <div class="contacts__box contacts__box--website">
                 <figure class="icon-box">
                     <i class="material-icons">language</i>
                 </figure>
-                <a href="www.barho-bauservice..de" class="contacts__website">www.barho-bauservice..de</a>
+                <a href="www.barho-bauservice..de" class="contacts__website">www.barho-bauservice.de</a>
             </div>            
         </div>
         <div class="footer__inner-box footer__inner-box--address">
@@ -37,7 +37,12 @@
             </address>
         </div>
         <div class="footer__inner-box footer__inner-box--logo">
-            <img class="footer__logo" src="./assets/images/logo.png" alt="logo">
+            <a 
+                class="header__link"
+                [routerLink]="['']"    
+            >
+                <img class="footer__logo" src="./assets/images/logo-white.png" alt="logo">
+            </a>
         </div>
     </div>
     <div class="footer__box footer__box--policies">

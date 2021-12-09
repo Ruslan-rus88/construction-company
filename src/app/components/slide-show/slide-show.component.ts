@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./slide-show.component.scss']
 })
 export class SlideShowComponent implements OnInit {
-  @Input() images: string[] = [];
+  @Input() images: any[] = [];
   interval: any;
   index = 0;
 
