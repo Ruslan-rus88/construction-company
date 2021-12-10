@@ -17,11 +17,18 @@
     width: 50%;
     box-sizing: border-box;
 }
+@media screen and (max-width: 530px) {
+    .gallery__item-box {
+        width: 100%;
+    }    
+}
 .gallery__item {
     overflow: hidden;
     border-radius: 5px 5px 0 0;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 12px;
-    // box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 14px 3px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 
     cursor: pointer;
     transition: 0.3s;
@@ -68,6 +75,10 @@
 }
 .gallery__text-box {
     padding: 15px 10px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .gallery__project-name {
     font-weight: 500;
