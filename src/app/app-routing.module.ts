@@ -23,7 +23,7 @@ const routes: Routes = [
   { path: paths.schadstoffsanierung, component: SchadstoffsanierungComponent },
   { path: paths.mobelmontage, component: MobelmontageComponent },
 
-  { path: paths.galerie, component: GalleryComponent },
+  { path: paths.referenzen, component: GalleryComponent },
   { path: paths.karriere, component: CareerComponent },
   { path: paths.kontakt, component: ContactsComponent },
   { path: '**', redirectTo: 'home' },
