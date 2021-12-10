@@ -141,7 +141,7 @@
         @keyframes move {
             0% {
                 top: 120px;
-                transform: translateX(-100vw);
+                transform: translateX(-100%);
             }
             100% {
                 top: 120px;
@@ -150,7 +150,7 @@
         }
 
         .nav__list--first {
-            width: 100vw;
+            width: 100%;
             height: calc(100vh - 120px);    
             padding: 30px;
             flex-direction: column;
