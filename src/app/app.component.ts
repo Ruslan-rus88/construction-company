@@ -1,4 +1,5 @@
 import { Component, HostListener } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +11,17 @@ export class AppComponent {
 
   @HostListener('window:scroll', ['$event']) onScroll(event: any) {
     this.displayScrollBtn = window.scrollY > 0 ? true : false;
+  }
+
+  constructor(
+    private router: Router
+  ) {
+    router.events.subscribe(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    })
   }
 
   scrollUp() {
