@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, HostListener, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-gallery-images-show',
@@ -6,11 +6,29 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./gallery-images-show.component.scss']
 })
 export class GalleryImagesShowComponent implements OnInit {
+  @HostListener('window:keyup', ['$event'])
+  keyEvent(event: KeyboardEvent) {
+    if(event.key == 'ArrowRight'){
+      if (!this.displayCollection) {
+        this.nextImage();
+      }
+    }
+    else if(event.key == 'ArrowLeft'){
+      if (!this.displayCollection) {
+        this.prevImage();
+      }
+    }
+    else if(event.key == 'Escape'){
+      this.onClose();
+    }
+  }
+
   @Input() project: any;
   @Output() closeGalleryImagesShow = new EventEmitter<void>();
   public activeImg: string = '';
   public activeImgIndex: number = 0;
   public play: boolean = false;
+  public displayCollection: boolean = false;
   interval: any;
   index = 0;
 
@@ -41,6 +59,9 @@ export class GalleryImagesShowComponent implements OnInit {
   }
 
   playSlideshow() {
+    if (this.displayCollection) {
+      return;
+    }
     if (this.play) {
       window.clearInterval(this.interval);
     } else {
@@ -63,5 +84,20 @@ export class GalleryImagesShowComponent implements OnInit {
     this.play = false;
     if (this.interval) window.clearInterval(this.interval);
     this.index = this.index > 0 ? this.index - 1 : this.project.images.length - 1;
+  }
+
+  displayAll() {
+
+  }
+
+  showCollection() {
+    this.displayCollection = true;
+    this.play = false;
+    window.clearInterval(this.interval);
+  }
+
+  onClickCollectionImage(index: number) {
+    this.index = index;
+    this.displayCollection = false;
   }
 }
