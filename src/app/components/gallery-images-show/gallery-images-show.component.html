@@ -1,23 +1,23 @@
 <div class="show">
-    <div class="show__header">
-        <div class="show__header-box show__header-box--counter">
-            <div class="show__counter">{{index+1}} / {{project.images.length}}</div>
+    <div class="show__box show__box--main">
+        <div class="show__header">
+            <div class="show__header-box show__header-box--counter">
+                <div class="show__counter">{{index+1}} / {{project.images.length}}</div>
+            </div>
+            <div class="show__header-box show__header-box--actions">
+                <span class="icon-box" (click)="playSlideshow()">
+                    <i class="material-icons" *ngIf="!play">play_arrow</i>
+                    <i class="material-icons" *ngIf="play">pause</i>
+                </span>
+                <span class="icon-box" (click)="showCollection()">
+                    <i class="material-icons">view_comfy</i>
+                </span>
+                <span class="icon-box" (click)="onClose()">
+                    <i class="material-icons">close</i>
+                </span>
+            </div>
         </div>
-        <div class="show__header-box show__header-box--actions">
-            <span class="icon-box" (click)="playSlideshow()">
-                <i class="material-icons" *ngIf="!play">play_arrow</i>
-                <i class="material-icons" *ngIf="play">pause</i>
-            </span>
-            <span class="icon-box" (click)="showCollection()">
-                <i class="material-icons">view_comfy</i>
-            </span>
-            <span class="icon-box" (click)="onClose()">
-                <i class="material-icons">close</i>
-            </span>
-        </div>
-    </div>
-    <div class="show__body" [ngClass]="{'show__body--large': displayCollection}">
-        <div class="show__body-box show__body-box--slideshow" *ngIf="!displayCollection">
+        <div class="show__body" [ngClass]="{'show__body--ml': displayCollection}">
             <img [src]="project.images[index]['url']" alt="" class="show__img">
             <span class="icon-box icon-box--arrow-back" (click)="prevImage()">
                 <i class="material-icons">arrow_back</i>
@@ -26,15 +26,18 @@
                 <i class="material-icons">arrow_forward</i>
             </span>    
         </div>
-        <div class="show__body-box show__body-box--collection" *ngIf="displayCollection">
-            <img 
-                [src]="img['url']"
-                [alt]="img.alt"
-                class="show__collection-img"
-                *ngFor="let img of project.images; let i = index"
-                (click)="onClickCollectionImage(i)">
-        </div>
+        <div class="show__footer">
+        </div>    
     </div>
-    <div class="show__footer">
+    <div class="show__box show__box--collection" *ngIf="displayCollection">
+        <div class="show__collection">
+            <img 
+            [src]="img['url']"
+            [alt]="img.alt"
+            class="show__collection-img"
+            *ngFor="let img of project.images; let i = index"
+            [ngClass]="{'show__collection-img--active': i === index}"
+            (click)="onClickCollectionImage(i)">
+        </div>
     </div>
 </div>

@@ -36,10 +36,6 @@ export class GalleryImagesShowComponent implements OnInit {
 
   ngOnInit(): void {
     this.activeImg = this.project.images[0];
-    console.log(this.project);
-    // this.startSlideShow();
-
-    // this.interval = window.setInterval(() => { this.setIndex() }, 3000)
   }
 
   setIndex() {
@@ -49,9 +45,7 @@ export class GalleryImagesShowComponent implements OnInit {
   onSelectImg(i: number) {
     window.clearInterval(this.interval);
     this.index = i;
-    // this.interval = window.setInterval(() => { this.setIndex() }, 3000);
     this.startSlideShow();
-
   }
 
   onClose() {
@@ -59,9 +53,6 @@ export class GalleryImagesShowComponent implements OnInit {
   }
 
   playSlideshow() {
-    if (this.displayCollection) {
-      return;
-    }
     if (this.play) {
       window.clearInterval(this.interval);
     } else {
@@ -86,18 +77,11 @@ export class GalleryImagesShowComponent implements OnInit {
     this.index = this.index > 0 ? this.index - 1 : this.project.images.length - 1;
   }
 
-  displayAll() {
-
-  }
-
   showCollection() {
-    this.displayCollection = true;
-    this.play = false;
-    window.clearInterval(this.interval);
+    this.displayCollection = !this.displayCollection;
   }
 
   onClickCollectionImage(index: number) {
     this.index = index;
-    this.displayCollection = false;
   }
 }
