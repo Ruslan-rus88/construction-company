@@ -1,0 +1,120 @@
+.contacts {
+
+}
+.contacts__form {
+
+}
+.form {
+    font-size: 14px;
+}
+.form__sections {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -20px;
+}
+.form__section-box {
+    padding: 0 20px;
+    width: 50%;
+}
+@media screen and (max-width: 700px) {
+    .form__section-box {
+        width: 100%;
+        padding-bottom: 20px;
+    }
+}
+.form__section {
+
+}
+.form__section--questions {
+
+}
+.form__title {
+    font-size: 20px;
+    color: var(--color-active);
+    padding-bottom: 15px;
+}
+.form__title--mt {
+    margin-top: 15px;
+}
+.form__box {
+    padding-bottom: 10px;
+}
+.form__text {
+
+}
+.form__options-box {
+    display: flex;
+    align-items: center;
+}
+.form__label {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    cursor: pointer;
+}
+.form__label--radio {
+    padding-left: 20px;
+    position: relative;
+}
+.form__radio {
+    display: none;
+
+    &:checked ~ .form__checkmark {
+        width: 8px;
+        height: 8px;
+        left: 3px;
+        border-radius: 50%;
+        background-color: #6FD297;
+        box-shadow: 0px 0px 0px 3px rgb(78 188 109 / 20%);
+        border: none;
+    }
+}
+.form__checkmark {
+    position: absolute;
+    display: block;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid var(--color-main);
+}
+.form__input {
+    min-width: 100%;
+    padding: 10px;
+    border: 1px solid rgb(126, 126, 126);
+}
+.form__input:focus, .form__textarea:focus {
+    border: 1px solid var(--color-active);
+    background-color: transparent;
+    color: var(--color-active);
+}
+.form__section--user-info {
+
+}
+.form__textarea {
+    min-width: 100%;
+    padding: 10px;
+    border: 1px solid rgb(126, 126, 126);
+}
+.form__text--info {
+    font-size: 14px;
+}
+.form__text--mb {
+    margin-bottom: 10px;
+}
+.form__actions {
+    text-align: center;
+    padding: 20px;
+}
+.form__btn {
+    padding: 10px 40px;
+    font-size: 20px;
+    border: none;
+    background-color: var(--color-active-light);
+    color: #fff;
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: var(--color-active);
+    }
+}

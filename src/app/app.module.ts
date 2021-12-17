@@ -19,6 +19,9 @@ import { MobelmontageComponent } from './pages/leistungen/mobelmontage/mobelmont
 import { AltbausanierungComponent } from './pages/leistungen/altbausanierung/altbausanierung.component';
 import { GalleryComponent } from './pages/gallery/gallery.component';
 import { GalleryImagesShowComponent } from './components/gallery-images-show/gallery-images-show.component';
+import { ImpressumComponent } from './pages/impressum/impressum.component';
+import { DatenschutzerklarungComponent } from './pages/datenschutzerklarung/datenschutzerklarung.component';
+import { CookieRichtlinieComponent } from './pages/cookie-richtlinie/cookie-richtlinie.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +42,9 @@ import { GalleryImagesShowComponent } from './components/gallery-images-show/gal
     AltbausanierungComponent,
     GalleryComponent,
     GalleryImagesShowComponent,
+    ImpressumComponent,
+    DatenschutzerklarungComponent,
+    CookieRichtlinieComponent,
   ],
   imports: [
     BrowserModule,

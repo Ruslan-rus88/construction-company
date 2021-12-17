@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { footerRoutes } from 'src/app/app-routes';
 
 @Component({
   selector: 'app-footer',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
-
+  public footerRoutes = footerRoutes;
+  
   constructor() { }
 
   ngOnInit(): void {
+    console.log(footerRoutes);
+    
   }
 
 }

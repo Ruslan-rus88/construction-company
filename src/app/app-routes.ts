@@ -8,7 +8,10 @@ export const paths = {
     mobelmontage: 'leistungen/mobelmontage',
     referenzen: 'referenzen',
     karriere: 'karriere',
-    kontakt: 'kontakt'
+    kontakt: 'kontakt',
+    impressum: 'impressum',
+    datenschutzerklarung: 'datenschutzerklarung',
+    cookie_richtlinie: 'cookie-richtlinie',
 }
 
 export const navRoutes = [
@@ -69,3 +72,24 @@ export const navRoutes = [
         subRoutes: []
     },
 ];
+
+export const footerRoutes = [
+    {
+        title: 'Impressum',
+        path: paths.impressum,
+        exact: true,
+        subRoutes: []
+    },
+    {
+        title: 'Datenschutzerklarung',
+        path: paths.datenschutzerklarung,
+        exact: true,
+        subRoutes: []
+    },
+    {
+        title: 'Cookie-Richtlinie',
+        path: paths.cookie_richtlinie,
+        exact: true,
+        subRoutes: []
+    },
+]
