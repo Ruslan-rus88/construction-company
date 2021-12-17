@@ -1,9 +1,122 @@
-<div class="page">
-    <form action="https://formsubmit.co/ruslan.rus88@gmail.com" method="POST">
-        <input type="hidden" name="_subject" value="Subject for email!!!!">
-        <input type="email" name="email" placeholder="Email Address" required>
-        <!-- <input type="hidden" name="_next" value="https://localhost:4200/kontakt"> -->
-        <input type="text" name="message" placeholder="message" required>
-        <button type="submit">Send</button>
-   </form>
+<div class="contacts page">
+    <div class="contact__wrapper wrapper">
+        <section class="contacts__section">
+            <form class="contacts__form form" action="https://formsubmit.co/ruslan.rus88@gmail.com" method="POST">
+                <input type="hidden" name="_subject" value="Subject for email!!!!">
+                <input type="hidden" name="_next" value="https://ruslan-rus88.github.io/construction-company/">
+        
+                <div class="form__sections">
+                    <div class="form__section-box">
+                        <div class="form__section form__section--questions">
+                            <h2 class="form__title">Angaben zu Ihrem Haus / Ihrer Wohnung</h2>
+                            <div class="form__box">
+                                <p class="form__text">Gebäudetyp:</p>
+                                <div class="form__options-box">
+                                    <label class="form__label form__label--radio">Neubau
+                                        <input class="form__radio" type="radio" name="Gebäudetyp" value="Neubau">
+                                        <span class="form__checkmark"></span>
+                                    </label>
+                                    <label class="form__label form__label--radio">Altbau
+                                        <input class="form__radio" type="radio" name="Gebäudetyp" value="Altbau">
+                                        <span class="form__checkmark"></span>
+                                    </label>    
+                                </div>
+                            </div>
+                
+                            <div class="form__box">
+                                <input class="form__input" type="text" name="Wie groß ist die Wohnunug / das Haus (m²)?" placeholder="Wie groß ist die Wohnunug / das Haus (m²)?">
+                            </div>
+                            
+                            <div class="form__box">
+                                <input class="form__input" type="text" name="Was soll gemacht werden?" placeholder="Was soll gemacht werden?">
+                            </div>
+                            
+                            <div class="form__box">
+                                <input class="form__input" type="text" name="Sind Sie Eingentümer oder Mieter?" placeholder="Sind Sie Eingentümer oder Mieter?">
+                            </div>
+                            
+                            <div class="form__box">
+                                <p class="form__text">In welche Qualität muss die Arbeit sein?</p>
+                                <div class="form__options-box">
+                                    <label class="form__label form__label--radio">Normal
+                                        <input class="form__radio" type="radio" name="In welche Qualität muss die Arbeit sein?" value="Normal">
+                                        <span class="form__checkmark"></span>
+                                    </label>
+                                    <label class="form__label form__label--radio">Hoch
+                                        <input class="form__radio" type="radio" name="In welche Qualität muss die Arbeit sein?" value="Hoch">
+                                        <span class="form__checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                
+                            <div class="form__box">
+                                <input class="form__input" type="text" name="Wann haben Sie Zeit für eine kostenlose und unverbindliche Besichtigung?" placeholder="Wann haben Sie Zeit für eine kostenlose und unverbindliche Besichtigung?">
+                            </div>
+                            
+                            <div class="form__box">
+                                <input class="form__input" type="text" name="Wann sollen die Arbeiten beginnen?" placeholder="Wann sollen die Arbeiten beginnen?">
+                            </div>
+                            
+                            <div class="form__box">
+                                <input class="form__input" type="text" name="Wo werden die Arbeiten sein?" placeholder="Wo werden die Arbeiten sein?">
+                            </div>
+                            
+                            <div class="form__box">
+                                <input class="form__input" type="text" name="Möchten Sie angerufen werden? und wenn ja wann?" placeholder="Möchten Sie angerufen werden? und wenn ja wann?">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form__section-box">
+                        <div class="form__section form__section--user-info">
+                            <h2 class="form__title">Ihre Kontaktdaten</h2>
+                            <div class="form__box">
+                                <p class="form__text">Ansprache:</p>
+                                <div class="form__options-box">
+                                    <label class="form__label form__label--radio">Herr
+                                        <input class="form__radio" type="radio" name="Ansprache" value="Herr">
+                                        <span class="form__checkmark"></span>
+                                    </label>
+                                    <label class="form__label form__label--radio">Frau
+                                        <input class="form__radio" type="radio" name="Ansprache" value="Frau">
+                                        <span class="form__checkmark"></span>
+                                    </label>
+                                    <label class="form__label form__label--radio">Firma
+                                        <input class="form__radio" type="radio" name="Ansprache" value="Firma">
+                                        <span class="form__checkmark"></span>
+                                        <!-- <p class="form__text form__text--label">Firma</p> -->
+                                    </label>
+                                </div>
+                            </div>
+                
+                            <div class="form__box">
+                                <input class="form__input" type="text" name="Name, Vorname, Firmenname" placeholder="Name, Vorname, Firmenname*" required>
+                            </div>
+                
+                            <div class="form__box">
+                                <input class="form__input" type="email" name="Ihre E-Mail Adresse" placeholder="Ihre E-Mail Adresse*" required>
+                            </div>
+                
+                            <div class="form__box">
+                                <input class="form__input" type="tel" name="Telefonnummer" placeholder="Telefonnummer">
+                            </div>
+                
+                            <h2 class="form__title form__title--mt">Weitere Fragen / Anregungen?</h2>
+                            <div class="form__box">
+                                <textarea class="form__textarea" name="Weitere Fragen / Anregungen?" rows="4" placeholder="Schreiben Sie uns bitte hier was Ihnen noch zu Ihrer Wohnung einfällt, und Ihre Fragen falls Sie noch offene Fragen haben."></textarea>
+                            </div>
+                    
+                            <p class="form__text form__text--info form__text--mb">Bemerkung: Die Schreibfläche können Sie ziehen / vergrößern.</p>
+                            <p class="form__text form__text--info">Datenschutzhinweis gem. DSGVO vom 25.05.2018:
+                                Es handelt sich hier um ein Kontaktformular! Die Verbindung ist SSL-verschlüsselt !
+                                Datensparsamkeit: Wir reduzieren die Datenfelder aufs Nötigste. Pflichtfelder sind mit (*) gekennzeichnet.</p>    
+                        </div>    
+                    </div>
+                </div>
+        
+                <div class="form__actions">
+                    <button class="form__btn" type="submit">Senden</button>
+                </div>
+             </form>
+       </section>
+    </div>
 </div>

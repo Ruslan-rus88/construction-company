@@ -46,8 +46,9 @@
         </div>
     </div>
     <div class="footer__box footer__box--policies">
-        <a class="nav__link">Impressum</a>
-        <a class="nav__link">Datenschutzerklärung</a>
-        <a class="nav__link">Cookie-Richtlinie</a>
+        <a *ngFor="let route of footerRoutes" 
+            class="nav__link"
+            [routerLink]="[route.path]"
+            >{{route.title}}</a>
     </div>
 </footer>
