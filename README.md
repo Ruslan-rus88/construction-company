@@ -1,3 +1,6 @@
+# Requirements
+install node modules after cloning repository by running `npm install`
+
 # ConstructionCompany
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.2.
