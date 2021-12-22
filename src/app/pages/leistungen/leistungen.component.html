@@ -1,3 +1,29 @@
-<div class="page">
-    <p>services works!</p>
+<div class="leistungen page">
+    <div class="leistungen__wrapper wrapper">
+        <div class="leistungen__box">
+            <div class="leistungen__inner-box">
+                <div class="leistungen__card" 
+                        *ngFor="let card of cards; let i = index"
+                        [ngStyle]="{'transform': getCardTransformStyle(i), 'z-index': getZIndex(i)}"
+                        [routerLink]="[card.path]"
+                        [routerLinkActiveOptions]="{exact: card.exact}"
+                        [routerLinkActive]="['nav__link--active']">
+                    <img class="leistungen__img" [src]="card.imgUrl" [alt]="card.imgAlt">
+                    <div class="leistungen__title-box">
+                        <h2 class="leistungen__title">{{card.title}}</h2>
+                    </div>
+                </div>
+            </div>
+            <span class="icon-box icon-box-left" (mouseenter)="rotate('dec')" (mouseleave)="clearInterval()">
+                <i class="material-icons">
+                    undo
+                </i>
+            </span>
+            <span class="icon-box icon-box-right" (mouseenter)="rotate('inc')" (mouseleave)="clearInterval()">
+                <i class="material-icons">
+                    redo
+                </i>
+            </span>
+        </div>
+    </div>
 </div>

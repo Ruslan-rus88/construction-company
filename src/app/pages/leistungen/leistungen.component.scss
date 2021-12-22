@@ -1,0 +1,208 @@
+.leistungen__wrapper {
+}
+.leistungen__box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+    margin: 0 auto;
+    width: 1000px;
+    height: 500px;
+    position: relative;
+}
+.leistungen__inner-box {
+    width: 1px;
+    height: 300px;
+    position: relative;
+}
+.leistungen__card {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 430px;
+    height: 300px;
+    display: block;
+    transform-origin: left;
+    transition: 1800ms ;
+    cursor: pointer;
+    overflow: hidden;
+
+    &:hover {
+        .leistungen__img {
+            opacity: 1;
+        }
+    }
+}
+.leistungen__img {
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    border-radius: 0 5px 5px 0;
+}
+.leistungen__title-box {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 8;
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: rgba(#009897, 0.8);
+
+        .leistungen__title {
+            font-size: 34px;
+            animation: slide 0.6s;
+        }
+    }
+}
+.leistungen__title {
+    font-size: 28px;
+    padding: 15px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    text-shadow: var(--color-active) 1px 0 10px;
+
+
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    transition: 0.3s;
+}
+
+@keyframes slide {
+    0% { left: -50% }
+    100% {  left: 50% }
+}
+@-moz-keyframes slide {
+    0% { left: -50% }
+    100% {  left: 50% }
+}
+@-webkit-keyframes slide {
+    0% { left: -50% }
+    100% {  left: 50% }
+}
+@-o-keyframes slide {
+    0% { left: -50% }
+    100% {  left: 50% }
+}
+
+.icon-box {
+    position: absolute;
+    top: 50%;
+    transform:  translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(203, 236, 225, 0.6);
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: rgba(203, 236, 225, 1);
+    }
+
+    .material-icons {
+        font-size: 30px;
+        color: var(--color-active);
+    }
+}
+
+.icon-box-left {
+    left: 0;
+
+    .material-icons{
+        transform: rotateZ(-100deg);
+    }
+}
+
+.icon-box-right {
+    right: 0;
+    .material-icons{
+        transform: rotateZ(100deg);
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .leistungen__box {
+        width: 740px;
+        height: 400px;
+    }
+    .leistungen__inner-box {
+        height: 200px;
+    }    
+    .leistungen__card {
+        width: 300px;
+        height: 200px;
+    }
+    .leistungen__title-box:hover > .leistungen__title {
+        font-size: 28px;
+    }    
+    .leistungen__title {
+        font-size: 22px;
+    }
+    .icon-box {
+        .material-icons {
+            font-size: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .leistungen__box {
+        width: 530px;
+        height: 250px;
+    }
+    .leistungen__inner-box {
+        height: 130px;
+    }    
+    .leistungen__card {
+        width: 200px;
+        height: 130px;
+    }
+    .leistungen__title-box:hover > .leistungen__title {
+        font-size: 20px;
+    }    
+    .leistungen__title {
+        font-size: 16px;
+    }
+    .icon-box {
+        .material-icons {
+            font-size: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .leistungen__box {
+        width: 100%;
+        height: 180px;
+
+        position: absolute;
+        left: 0;
+    }
+    .leistungen__inner-box {
+        height: 78px;
+    }    
+    .leistungen__card {
+        width: 120px;
+        height: 78px;
+    }
+    .leistungen__title-box:hover > .leistungen__title {
+        font-size: 12px;
+    }    
+    .leistungen__title {
+        font-size: 11px;
+    }
+    .icon-box {
+        padding: 7px;
+        .material-icons {
+            font-size: 14px;
+        }
+    }
+}

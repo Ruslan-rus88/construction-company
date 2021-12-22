@@ -12,23 +12,17 @@ export class SlideShowComponent implements OnInit {
 
   constructor() { }
 
-
   ngOnInit(): void {
-    this.interval = window.setInterval(() => { this.setIndex() }, 3000)
+    this.interval = window.setInterval(() => { this.setIndex() }, 3000);
   }
 
   setIndex() {
-    this.index = this.index < this.images.length - 1 ? this.index + 1 : 0      
+    this.index = this.index < this.images.length - 1 ? this.index + 1 : 0;
   }
 
   onSelectImg(i: number) {
     window.clearInterval(this.interval);
     this.index = i;
     this.interval = window.setInterval(() => { this.setIndex() }, 3000);
-  }
-
-  test() {
-    console.log(1);
-    
   }
 }
