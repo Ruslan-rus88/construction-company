@@ -51,10 +51,11 @@ export class LeistungenComponent implements OnInit {
 
   ngOnInit(): void {
     this.angle = 55;
+    this.rotate('inc');
   }
 
   getCardTransformStyle(i: number) {
-    return `rotateX(8deg) rotateY(${72 * i + this.angle}deg)`;
+    return `rotateX(8deg) rotateY(${72 * i + this.angle}deg) translateY(-50%)`;
   }
 
   getZIndex(i: number) {
@@ -71,9 +72,10 @@ export class LeistungenComponent implements OnInit {
   }
 
   rotate(type: string) {
+    window.clearInterval(this.interval);
     this.interval = window.setInterval(() => {
-      this.angle = type === 'inc' ? this.angle + 20 : this.angle - 20;
-    }, 600);
+      this.angle = type === 'inc' ? this.angle + 1 : this.angle - 1;
+    }, 20);
     window.setInterval(this.interval);
   }
 
