@@ -1,0 +1,6 @@
+<div class="img-box">
+    <h1 class="title" *ngIf="showTitle">{{title}}</h1>
+    <img [src]="img.imgUrl" [alt]="img.imgAlt" class="img">
+    <div class="img-card" [ngStyle]="{'width.%': 100 / rows, 'height.%': 100 / columns}" *ngFor="let card of cardsArray"></div>
+</div>
+

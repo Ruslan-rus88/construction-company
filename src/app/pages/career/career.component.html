@@ -1,8 +1,12 @@
 <div class="career page">
-    <div class="career__box career__box--img">
-        <h1 class="career__main-title" *ngIf="showTitle">Starten Sie Ihre Karriere in<br>Barho Bauservice</h1>
-        <img src="assets/images/career.jpg" alt="career in Barho bauservice" class="career__img">
-        <div class="career__img-card" *ngFor="let card of cardsArray"></div>
+    <div class="career__box career__box--image-grid">
+        <app-image-grid 
+        [img]="img" 
+        [title]="title" 
+        [rows]="5" 
+        [columns]="5"
+        [milliSeconds]="100">
+    </app-image-grid>
     </div>
     <section class="career__section">
         <div class="career__wrapper wrapper">

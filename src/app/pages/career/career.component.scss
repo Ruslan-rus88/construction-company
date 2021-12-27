@@ -8,56 +8,11 @@
 
 }
 .career__box {
-    padding-bottom: 25px;
+    margin-bottom: 25px;
 }
-.career__box--img {
+.career__box--image-grid {
     width: 100%;
     height: 65vw;
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-}
-.career__main-title {
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate3d(-50%, -50%, 0);
-    font-size: 6vw;
-    text-align: center;
-    color: #fff;
-    text-shadow: var(--color-active) 1px 0 10px;
-    z-index: 2;
-}
-.career__img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-.career__img-card {
-    width: 20%;
-    height: 13vw;
-    z-index: 1;
-    transform-origin: bottom;
-    background-color: #fff;
-}
-.career__img-card--rotate {
-    animation: rotateCard 100ms ease-in;
-    background-color: transparent;
-}
-
-@keyframes rotateCard {
-    0% {
-        background-color: #fff;
-        transform: rotateX(0deg);
-    }
-    99% {
-        background-color: #fff;
-    }
-    100% {
-        transform: rotateX(-90deg);
-        background-color: transparent;
-    }
 }
 .career__box--info { }
 .career__info {

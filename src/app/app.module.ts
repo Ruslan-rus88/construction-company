@@ -22,6 +22,7 @@ import { GalleryImagesShowComponent } from './components/gallery-images-show/gal
 import { ImpressumComponent } from './pages/impressum/impressum.component';
 import { DatenschutzerklarungComponent } from './pages/datenschutzerklarung/datenschutzerklarung.component';
 import { CookieRichtlinieComponent } from './pages/cookie-richtlinie/cookie-richtlinie.component';
+import { ImageGridComponent } from './components/image-grid/image-grid.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { CookieRichtlinieComponent } from './pages/cookie-richtlinie/cookie-rich
     ImpressumComponent,
     DatenschutzerklarungComponent,
     CookieRichtlinieComponent,
+    ImageGridComponent,
   ],
   imports: [
     BrowserModule,
