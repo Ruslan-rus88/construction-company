@@ -1,16 +1,19 @@
 .leistungen__wrapper {
 }
 .leistungen__box {
+    margin: 30px auto 0;
+}
+.leistungen__box--cards {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 30px auto 0;
     width: 100%;
     height: 50vw;
     position: relative;
     padding-top: 60px;
 }
-.leistungen__main-title {
+.leistungen__title {}
+.leistungen__title--main {
     position: absolute;
     font-size: 36px;
     left: 50%;
@@ -44,10 +47,10 @@
     }
 }
 @media screen and (min-width: 700px) {
-    .leistungen__main-title {
+    .leistungen__title--main {
         font-size: 50px;
     }
-    .leistungen__box {
+    .leistungen__box--cards {
         width: 100%;
         min-height: 25vw;
     }
@@ -66,7 +69,7 @@
     opacity: 0.9;
     border-radius: 0 5px 5px 0;
 }
-.leistungen__title-box {
+.leistungen__card-title-box {
     position: absolute;
     left: 0;
     top: 0;
@@ -78,14 +81,14 @@
     &:hover {
         background-color: rgba(#009897, 0.8);
 
-        .leistungen__title {
+        .leistungen__title--card {
             font-size: 3vw;
             color: rgba(#fff, 0.9);
             animation: slide 0.6s;
         }
     }
 }
-.leistungen__title {
+.leistungen__title--card {
     font-size: 4vw;
     padding: 15px;
     border-radius: 5px;
@@ -154,81 +157,19 @@
     }
 }
 
-// @media screen and (max-width: 1000px) {
-//     // .leistungen__box {
-//     //     width: 740px;
-//     //     height: 400px;
-//     // }
-//     // .leistungen__inner-box {
-//     //     height: 200px;
-//     // }    
-//     // .leistungen__card {
-//     //     width: 300px;
-//     //     height: 200px;
-//     // }
-//     .leistungen__title-box:hover > .leistungen__title {
-//         font-size: 28px;
-//     }    
-//     .leistungen__title {
-//         font-size: 22px;
-//     }
-//     .icon-box {
-//         .material-icons {
-//             font-size: 30px;
-//         }
-//     }
-// }
-
-// @media screen and (max-width: 800px) {
-//     // .leistungen__box {
-//     //     width: 530px;
-//     //     height: 250px;
-//     // }
-//     // .leistungen__inner-box {
-//     //     height: 130px;
-//     // }    
-//     // .leistungen__card {
-//     //     width: 200px;
-//     //     height: 130px;
-//     // }
-//     .leistungen__title-box:hover > .leistungen__title {
-//         font-size: 20px;
-//     }    
-//     .leistungen__title {
-//         font-size: 16px;
-//     }
-//     .icon-box {
-//         .material-icons {
-//             font-size: 20px;
-//         }
-//     }
-// }
-
-// @media screen and (max-width: 600px) {
-//     // .leistungen__box {
-//     //     width: 100%;
-//     //     height: 180px;
-
-//     //     position: absolute;
-//     //     left: 0;
-//     // }
-//     // .leistungen__inner-box {
-//     //     height: 78px;
-//     // }    
-//     // .leistungen__card {
-//     //     width: 120px;
-//     //     height: 78px;
-//     // }
-//     .leistungen__title-box:hover > .leistungen__title {
-//         font-size: 12px;
-//     }    
-//     .leistungen__title {
-//         font-size: 11px;
-//     }
-//     .icon-box {
-//         padding: 7px;
-//         .material-icons {
-//             font-size: 14px;
-//         }
-//     }
-// }
+.leistungen__box--content {
+    margin-bottom: 30px;
+}
+.leistungen__title--second {
+    font-size: 25px;
+    color: var(--color-active);
+    padding-bottom: 15px;
+}
+.leistungen__title--third {
+    font-size: 20px;
+    color: var(--color-active);
+    padding-bottom: 15px;
+}
+.leistungen__text {
+    padding-bottom: 10px;
+}

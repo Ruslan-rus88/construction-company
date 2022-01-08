@@ -40,20 +40,10 @@
                             >{{service.title}}
                         </li>
                     </ul>
-                    <div class="services__image-box" *ngIf="index === 0" >
-                        <img class="services__image" [src]="services[0].img" alt="">
-                    </div>
-                    <div class="services__image-box" *ngIf="index === 1" >
-                        <img class="services__image" [src]="services[1].img" alt="">
-                    </div>
-                    <div class="services__image-box" *ngIf="index === 2" >
-                        <img class="services__image" [src]="services[2].img" alt="">
-                    </div>
-                    <div class="services__image-box" *ngIf="index === 3" >
-                        <img class="services__image" [src]="services[3].img" alt="">
-                    </div>
-                    <div class="services__image-box" *ngIf="index === 4" >
-                        <img class="services__image" [src]="services[4].img" alt="">
+                    <div class="services__image-box" 
+                        *ngFor="let service of services; let i = index" 
+                        [ngClass]="{'services__image-box--hidden': i !== index}">
+                        <img class="services__image" [src]="service.imgUrl" [alt]="service.imgAlt">
                     </div>
                 </div>
             </div>

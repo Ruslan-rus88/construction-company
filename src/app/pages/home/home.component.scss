@@ -163,6 +163,11 @@
     position: relative;
     overflow: hidden;
 }
+
+.services__image-box--hidden {
+    display: none;
+}
+
 .services__image {
     position: absolute;
     top: 50%;

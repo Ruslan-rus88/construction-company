@@ -1,32 +1,26 @@
 <div class="leistungen page">
-    <div class="leistungen__wrapper">
-        <div class="leistungen__box">
-            <h1 class="leistungen__main-title">Leistungen</h1>
-            <div class="leistungen__inner-box">
-                <div class="leistungen__card" 
-                        *ngFor="let card of cards; let i = index"
-                        [ngStyle]="{'transform': getCardTransformStyle(i), 'z-index': getZIndex(i)}"
-                        [routerLink]="[card.path]"
-                        [routerLinkActiveOptions]="{exact: card.exact}"
-                        [routerLinkActive]="['nav__link--active']"
-                        (mouseleave)="rotate('inc')"
-                        (mouseenter)="clearInterval()">
-                    <img class="leistungen__img" [src]="card.imgUrl" [alt]="card.imgAlt">
-                    <div class="leistungen__title-box">
-                        <h2 class="leistungen__title">{{card.title}}</h2>
-                    </div>
+    <div class="leistungen__box leistungen__box--cards">
+        <h1 class="leistungen__title leistungen__title--main">Leistungen</h1>
+        <div class="leistungen__inner-box">
+            <div class="leistungen__card" 
+                    *ngFor="let card of cards; let i = index"
+                    [ngStyle]="{'transform': getCardTransformStyle(i), 'z-index': getZIndex(i)}"
+                    [routerLink]="[card.path]"
+                    [routerLinkActiveOptions]="{exact: card.exact}"
+                    [routerLinkActive]="['nav__link--active']"
+                    (mouseleave)="rotate('inc')"
+                    (mouseenter)="clearInterval()">
+                <img class="leistungen__img" [src]="card.imgUrl" [alt]="card.imgAlt">
+                <div class="leistungen__card-title-box">
+                    <h2 class="leistungen__title leistungen__title--card">{{card.title}}</h2>
                 </div>
             </div>
-            <!-- <span class="icon-box icon-box-left" (mouseenter)="rotate('dec')" (mouseleave)="clearInterval()">
-                <i class="material-icons">
-                    undo
-                </i>
-            </span>
-            <span class="icon-box icon-box-right" (mouseenter)="rotate('inc')" (mouseleave)="clearInterval()">
-                <i class="material-icons">
-                    redo
-                </i>
-            </span> -->
         </div>
+    </div>
+    <div class="leistungen__box leistungen__box--content wrapper">
+        <h2 class="leistungen__title leistungen__title--second">Wir bieten Ihnen als Bauunternehmen für die Komplettsanierung alles aus einer Hand</h2>
+        <h3 class="leistungen__title leistungen__title--third">Profitieren Sie von unserer Erfahrung als Sanierungsunternehmen und von einem eingespielten Handwerker-Team</h3>
+        <p class="leistungen__text">Wir renovieren, sanieren und modernisieren Ihre Immobilie in Ruhrgebiet  nach Ihren Vorstellungen. Wir bieten komplette Altbausanierungen, Renovierungen oder auch Teilsanierungen wie Badsanierung oder Innenausbau an. Durch unsere kompetente Bauleitung vor Ort wird die Baustelle nicht zum Problemfall für Sie. Nutzen Sie den kompetenten Ansprechpartner der Ihnen jederzeit Auskunft über den aktuellen Stand der Arbeiten geben kann.</p>
+        <p class="leistungen__text">Nutzen Sie die günstigen Pauschalpreise oder lassen Sie sich ein individuelles Angebot erstellen. Unser Handwerker-Team übernimmt die Sanierung und Modernisierung, um Ihnen ein zeitgemäßes und energieeffizientes Wohnen zu ermöglichen.</p>
     </div>
 </div>

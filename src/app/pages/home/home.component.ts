@@ -25,31 +25,36 @@ export class HomeComponent implements OnInit {
       title: 'Altbausanierung',
       path: paths.altbausanierung,
       exact: true,
-      img: 'assets/images/home-services/altbausanierung.jpg'
+      imgUrl: 'assets/images/home-services/altbausanierung.jpg',
+      imgAlt: ''
     },
     {
       title: 'Trockenbau',
       path: paths.trockenbau,
       exact: true,
-      img: 'assets/images/home-services/trockenbau.jpg'
+      imgUrl: 'assets/images/home-services/trockenbau.jpg',
+      imgAlt: ''
     },
     {
       title: 'Abbruch/Entkernung',
       path: paths.abbruch,
       exact: true,
-      img: 'assets/images/home-services/abbruch.jpg'
+      imgUrl: 'assets/images/home-services/abbruch.jpg',
+      imgAlt: ''
     },
     {
       title: 'Schadstoffsanierung',
       path: paths.schadstoffsanierung,
       exact: true,
-      img: 'assets/images/home-services/schadstoffsanierung.jpg'
+      imgUrl: 'assets/images/home-services/schadstoffsanierung.jpg',
+      imgAlt: ''
     },
     {
       title: 'Möbelmontage',
       path: paths.mobelmontage,
       exact: true,
-      img: 'assets/images/home-services/mobelmontage.jpg'
+      imgUrl: 'assets/images/home-services/mobelmontage.jpg',
+      imgAlt: ''
     }
 ]
   }
