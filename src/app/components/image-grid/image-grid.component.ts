@@ -1,11 +1,11 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-image-grid',
   templateUrl: './image-grid.component.html',
   styleUrls: ['./image-grid.component.scss']
 })
-export class ImageGridComponent implements OnInit {
+export class ImageGridComponent implements OnInit, OnDestroy {
   @Input() img: {imgUrl: string, imgAlt: string} = {imgUrl: '', imgAlt: ''};
   @Input() rows: number = 0;
   @Input() columns: number = 0;
@@ -19,7 +19,7 @@ export class ImageGridComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.cardsArray = Array(this.rows * this.columns);
     this.interval = window.setInterval(() => {
       document.querySelectorAll('.img-card')[this.index].classList.add('img-card-rotate');
@@ -30,5 +30,10 @@ export class ImageGridComponent implements OnInit {
         window.clearInterval(this.interval);
       }
      }, this.milliSeconds);
+  }
+
+  ngOnDestroy() {
+    this.cardsArray = [];
+    window.clearInterval(this.interval);
   }
 }
