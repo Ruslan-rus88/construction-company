@@ -23,6 +23,7 @@ import { ImpressumComponent } from './pages/impressum/impressum.component';
 import { DatenschutzerklarungComponent } from './pages/datenschutzerklarung/datenschutzerklarung.component';
 import { CookieRichtlinieComponent } from './pages/cookie-richtlinie/cookie-richtlinie.component';
 import { ImageGridComponent } from './components/image-grid/image-grid.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,7 @@ import { ImageGridComponent } from './components/image-grid/image-grid.component
     BrowserModule,
     AppRoutingModule,
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
