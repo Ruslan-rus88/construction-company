@@ -12,6 +12,7 @@ export const paths = {
     impressum: 'impressum',
     datenschutzerklarung: 'datenschutzerklarung',
     cookie_richtlinie: 'cookie-richtlinie',
+    thank_you: 'thank-you',
 }
 
 export const navRoutes = [
@@ -89,6 +90,12 @@ export const footerRoutes = [
     {
         title: 'Cookie-Richtlinie',
         path: paths.cookie_richtlinie,
+        exact: true,
+        subRoutes: []
+    },
+    {
+        title: 'Thank-you',
+        path: paths.thank_you,
         exact: true,
         subRoutes: []
     },

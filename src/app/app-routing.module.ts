@@ -14,6 +14,7 @@ import { LeistungenComponent } from './pages/leistungen/leistungen.component';
 import { MobelmontageComponent } from './pages/leistungen/mobelmontage/mobelmontage.component';
 import { SchadstoffsanierungComponent } from './pages/leistungen/schadstoffsanierung/schadstoffsanierung.component';
 import { TrockenbauComponent } from './pages/leistungen/trockenbau/trockenbau.component';
+import { ThankYouComponent } from './pages/thank-you/thank-you.component';
 
 const routes: Routes = [
   { path: paths.home, component: HomeComponent },
@@ -32,6 +33,7 @@ const routes: Routes = [
   { path: paths.impressum, component: ImpressumComponent },
   { path: paths.datenschutzerklarung, component: DatenschutzerklarungComponent },
   { path: paths.cookie_richtlinie, component: CookieRichtlinieComponent },
+  { path: paths.thank_you, component: ThankYouComponent },
   { path: '**', redirectTo: 'home' },
 ];
 

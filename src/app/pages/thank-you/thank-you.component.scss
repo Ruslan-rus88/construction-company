@@ -1,0 +1,33 @@
+.thank-you {}
+
+.thank-you__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.thank-you__title {
+    margin: 20px 0;
+    color: var(--color-active);
+}
+
+.thank-you__text {
+    font-size: 18px;
+    // color: rgb(102, 101, 101);
+}
+
+.icon-box {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    margin-top: 20px;
+
+    .material-icons {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        font-size: 70px;
+        color: var(--color-active);
+    }
+}

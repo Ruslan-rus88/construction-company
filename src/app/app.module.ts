@@ -24,6 +24,7 @@ import { DatenschutzerklarungComponent } from './pages/datenschutzerklarung/date
 import { CookieRichtlinieComponent } from './pages/cookie-richtlinie/cookie-richtlinie.component';
 import { ImageGridComponent } from './components/image-grid/image-grid.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { ThankYouComponent } from './pages/thank-you/thank-you.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     DatenschutzerklarungComponent,
     CookieRichtlinieComponent,
     ImageGridComponent,
+    ThankYouComponent,
   ],
   imports: [
     BrowserModule,
