@@ -71,13 +71,7 @@ export const navRoutes = [
         path: paths.kontakt,
         exact: true,
         subRoutes: []
-    },
-    {
-        title: 'Thank-you',
-        path: paths.thank_you,
-        exact: true,
-        subRoutes: []
-    },
+    }
 ];
 
 export const footerRoutes = [
