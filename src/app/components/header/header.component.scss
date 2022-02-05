@@ -19,19 +19,27 @@
     align-items: center;
 }
 
+@media screen and (max-width: 600px) {
+    .header__box {
+        height: 70px;
+    }
+}
+
 .header__box--logo {
 }
 
 .header__link {
+    height: inherit;
 }
 
 .header__img-box {
     margin: 0;
+    height: inherit;
 }
 
 .header__img {
-    width: 180px;
-    height: 90px;
+    padding: 10px;
+    height: inherit;
 }
 
 .header__box--navbar {
