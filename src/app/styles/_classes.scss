@@ -6,6 +6,12 @@
   padding-top: 120px;
 }
 
+@media screen and (max-width: 600px) {
+  .page {
+    padding-top: 70px;
+  }
+}
+
 .wrapper {
   max-width: 1200px;
   box-sizing: border-box;
