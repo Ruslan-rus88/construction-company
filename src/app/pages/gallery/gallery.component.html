@@ -4,7 +4,7 @@
       <div class="gallery__item-box" *ngFor="let project of projects; let i = index">
         <div class="gallery__item" (click)="activeProjectIndex = i">
           <div class="gallery__img-box">
-            <img [src]="project.images[0].url" alt="" class="gallery__img">
+            <img [src]="project.images[0].url" [alt]="project.images[0].alt" class="gallery__img">
             <div class="gallery__location-box">
               <span class="icon-box">
                 <i class="material-icons">place</i>
