@@ -3,8 +3,8 @@ export const projectsData = [
         project_name: 'Einfamilienhaus',
         location: '58453 Witten',
         images: [
-            { url: 'assets/images/gallery/project1/1.jpg', alt: '' },
-            { url: 'assets/images/gallery/project1/2.jpg', alt: '' },
+            { url: 'assets/images/gallery/project1/1.jpg', alt: 'test alt 1' },
+            { url: 'assets/images/gallery/project1/2.jpg', alt: 'test alt 2' },
             { url: 'assets/images/gallery/project1/3.jpg', alt: '' },
             { url: 'assets/images/gallery/project1/4.jpg', alt: '' },
             { url: 'assets/images/gallery/project1/5.jpg', alt: '' },
