@@ -62,7 +62,7 @@ export class GalleryImagesShowComponent implements OnInit {
   }
 
   startSlideShow() {
-    this.interval = window.setInterval(() => { this.setIndex() }, 3000);
+    this.interval = window.setInterval(() => { this.setIndex() }, 1500);
   }
 
   nextImage() {

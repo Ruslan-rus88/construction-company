@@ -55,7 +55,7 @@ import { ThankYouComponent } from './pages/thank-you/thank-you.component';
     BrowserModule,
     AppRoutingModule,
   ],
-  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
+  // providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
